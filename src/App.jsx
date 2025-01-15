@@ -1,4 +1,4 @@
-import { useQuery, gql, useMutation } from "@apollo/client";
+import { useQuery, gql, useMutation } from '@apollo/client';
 
 const TODOS_QUERY = gql`
   {
@@ -30,10 +30,10 @@ function App() {
     })
       .then((res) => {
         if (res?.data?.removeTodo?.id === id) {
-          console.log("Todo removed");
+          console.log('Todo removed');
         }
       })
-      .catch((error) => console.error("Error removing todo:", error));
+      .catch((error) => console.error('Error removing todo:', error));
   };
 
   return (
